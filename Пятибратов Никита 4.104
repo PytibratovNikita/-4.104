@@ -1,0 +1,25 @@
+using System;
+namespace ConsoleApplication7 
+{ 
+    public enum DayOfWeek 
+    { 
+        Понедельник = 1, 
+        Вторник = 2, 
+        Среда = 3, 
+        Четверг = 4, 
+        Пятницa = 5, 
+        Суббота = 6, 
+        Воскресенье = 7 
+    } 
+    class Program 
+    { 
+        public static void Main(string[] args) 
+        { 
+            Console.Write("n="); 
+            var n = int.Parse(Console.ReadLine());
+            Console.WriteLine((DayOfWeek)((n - 1) % Enum.GetValues(typeof(DayOfWeek)).Length));
+        } 
+    } 
+}
+ 
+    
